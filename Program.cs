@@ -1,3 +1,5 @@
+using Cars.ApplicationServices.Services;
+using Cars.Core.ServiceInterface;
 using Cars.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -20,6 +22,8 @@ builder.Services.AddCors(options =>
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddScoped<ICarServices, CarServices>();
 
 var app = builder.Build();
 
