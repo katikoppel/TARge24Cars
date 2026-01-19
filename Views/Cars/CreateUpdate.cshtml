@@ -1,7 +1,13 @@
 ﻿@model Cars.Models.Cars.CarsCreateUpdateViewModel
 
-<h1>Create</h1>
-
+@if (Model.Id.HasValue)
+{
+    <h1>Update</h1>
+}
+else
+{
+    <h1>Create</h1>
+}
 
 <div>
     <form method="post" enctype="multipart/form-data">
@@ -38,11 +44,20 @@
         </div>
 
         <div class="mt-4 d-flex gap-2">
+            @if (Model.Id.HasValue)
+            {
+                <button asp-action="update" asp-controller="cars" type="submit" class="btn btn-primary">
+                    Update
+                </button>
+            }
+            else
+            {
                 <button asp-action="create" asp-controller="cars" type="submit" class="btn btn-primary">
                     Create
                 </button>
+            }
 
-            <a asp-action="Index" asp-controller="cars" class="btn btn-success">
+            <a asp-action="Index" asp-controller="cars" class="btn btn-danger">
                 Back
             </a>
         </div>
