@@ -28,8 +28,9 @@
 					<td>@car.ReleaseYear</td>
 					<td>@car.Price</td>
 					<td>
-						<a asp-action="details" asp-controller="cars" asp-route-id="@car.Id" class="btn btn-success">Details</a>
-						<a asp-action="update" asp-controller="cars" asp-route-id="@car.Id" class="btn btn-primary">Update</a>
+						<a asp-action="details" asp-controller="cars" asp-route-id="@car.Id" class="btn btn-outline-success">Details</a>
+						<a asp-action="update" asp-controller="cars" asp-route-id="@car.Id" class="btn btn-outline-primary">Update</a>
+						<a asp-action="delete" asp-controller="cars" asp-route-id="@car.Id" class="btn btn-outline-danger">Delete</a>
 					</td>
 				</tr>
 
