@@ -115,5 +115,28 @@ namespace Cars.Controllers
 
             return RedirectToAction(nameof(Index));
         }
+
+        [HttpGet]
+        public async Task<IActionResult> Details(Guid id)
+        {
+            var car = await _carServices.DetailAsync(id);
+
+            if (car == null)
+            {
+                return NotFound();
+            }
+
+            var vm = new CarsDetailsViewModel();
+
+            vm.Id = car.Id;
+            vm.Brand = car.Brand;
+            vm.Model = car.Model;
+            vm.ReleaseYear = car.ReleaseYear;
+            vm.Price = car.Price;
+            vm.CreatedAt = car.CreatedAt;
+            vm.ModifiedAt = car.ModifiedAt;
+
+            return View(vm);
+        }
     }
 }

@@ -4,10 +4,6 @@
 	var Nr = 1;
 }
 
-<div>
-	<a asp-action="create" asp-controller="Cars" type="submit" class="btn btn-primary">Create</a>
-</div>
-
 <div class="h1">
 	Cars
 </div>
@@ -32,6 +28,7 @@
 					<td>@car.ReleaseYear</td>
 					<td>@car.Price</td>
 					<td>
+						<a asp-action="details" asp-controller="cars" asp-route-id="@car.Id" class="btn btn-success">Details</a>
 						<a asp-action="update" asp-controller="cars" asp-route-id="@car.Id" class="btn btn-primary">Update</a>
 					</td>
 				</tr>
@@ -41,3 +38,7 @@
 		</tbody>
 	</table>
 </form>
+
+<div>
+	<a asp-action="create" asp-controller="Cars" type="submit" class="btn btn-primary">Add new car</a>
+</div>
