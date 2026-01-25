@@ -23,7 +23,6 @@
     <ProjectReference Include="..\Cars.ApplicationServices\Cars.ApplicationServices.csproj" />
     <ProjectReference Include="..\Cars.Core\Cars.Core.csproj" />
     <ProjectReference Include="..\Cars.Data\Cars.Data.csproj" />
-    <ProjectReference Include="..\TARge24Cars\Cars.csproj" />
   </ItemGroup>
 
 </Project>

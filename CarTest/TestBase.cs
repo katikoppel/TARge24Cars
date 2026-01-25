@@ -1,6 +1,5 @@
 ﻿using CarTest.Macros;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using Cars.ApplicationServices.Services;
 using Cars.Core.ServiceInterface;
 using Cars.Data;
